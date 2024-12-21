@@ -5,70 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context="org.heclgg.eggclock.ClockMainActivity">
+    tools:context="org.heclgg.eggclock.ui.ClockMainActivity">
 
     <TextView
-        android:id="@+id/tv_time"
+        android:id="@+id/main_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:clickable="true"
         android:gravity="center"
-        android:textColor="#fff"
+        android:textColor="#dbe2ef"
         android:textSize="142sp" />
-
-    <TextView
-        android:id="@+id/tv_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:clickable="true"
-        android:textColor="#fff"
-        android:textSize="32sp" />
-
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_date"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:clickable="true"
-        android:textColor="#fff"
-        android:textSize="26sp" />
-
-    <TextView
-        android:id="@+id/tv_descript"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:clickable="true"
-        android:gravity="center"
-        android:textColor="#fff"
-        android:textSize="26sp" />
-
-    <TextView
-        android:id="@+id/tv_weather"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:clickable="true"
-        android:text="hello world"
-        android:textColor="#fff"
-        android:textSize="22sp"/>
-
-    <TextView
-        android:id="@+id/tv_setting"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/design_default_color_error"
-        android:padding="5dp"
-        android:text="hello world"
-        android:visibility="gone" />
 </RelativeLayout>

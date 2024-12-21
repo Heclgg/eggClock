@@ -1,10 +1,15 @@
-package org.heclgg.eggclock
+package org.heclgg.eggclock.ui
 
-import android.app.Activity
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.lifecycle.ViewModelProvider
+import org.heclgg.eggclock.R
+import org.heclgg.eggclock.viewModel.ClockMainViewModel
 
 /**
  * 桌面时钟主页面
@@ -12,12 +17,20 @@ import androidx.core.view.WindowInsetsControllerCompat
  * @author heclgg
  * @since 2024/12/13
  */
-class ClockMainActivity : Activity() {
+class ClockMainActivity : AppCompatActivity() {
 
+    private lateinit var viewModel: ClockMainViewModel
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         hideSystemBar()
         setContentView(R.layout.clock_main)
+        viewModel = ViewModelProvider(this)[ClockMainViewModel::class.java]
+        viewModel.getTime()
+        viewModel.fullTime.observe(this) { time ->
+            findViewById<TextView>(R.id.main_time).text = time
+        }
     }
 
     /**

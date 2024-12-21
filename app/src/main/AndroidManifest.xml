@@ -10,7 +10,7 @@
         android:theme="@style/Theme.EggClock">
 
         <activity
-            android:name=".ClockMainActivity"
+            android:name=".ui.ClockMainActivity"
             android:exported="true"
             tools:ignore="DiscouragedApi">
             <intent-filter>
