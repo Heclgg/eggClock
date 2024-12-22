@@ -1,19 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/clock_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
+    android:orientation="vertical"
     tools:context="org.heclgg.eggclock.ui.ClockMainActivity">
 
     <TextView
-        android:id="@+id/main_time"
+        android:id="@+id/tv_is24HourModeEnabled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:clickable="true"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:padding="10dp"/>
+    <TextClock
+        android:id="@+id/tc_timeText_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:textColor="#dbe2ef"
-        android:textSize="142sp" />
-</RelativeLayout>
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+    <TextClock
+        android:id="@+id/tc_dateText_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tv_12hour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:padding="10dp"/>
+
+    <TextClock
+        android:id="@+id/tc_timeText_24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:format12Hour="hh:mm:ss"
+        android:format24Hour="HH:mm:ss"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+    <TextClock
+        android:id="@+id/tc_dateText_24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:format12Hour="yyyy/MM/dd E"
+        android:format24Hour="yyyy/MM/dd E"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tv_24hour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:padding="10dp"/>
+</LinearLayout>
