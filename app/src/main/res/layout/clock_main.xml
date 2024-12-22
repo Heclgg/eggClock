@@ -9,60 +9,36 @@
     tools:context="org.heclgg.eggclock.ui.ClockMainActivity">
 
     <TextView
-        android:id="@+id/tv_is24HourModeEnabled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="16sp"
-        android:padding="10dp"/>
-    <TextClock
-        android:id="@+id/tc_timeText_12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"/>
-    <TextClock
-        android:id="@+id/tc_dateText_12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="20sp"/>
-    <TextView
-        android:id="@+id/tv_12hour"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="16sp"
-        android:padding="10dp"/>
+        android:layout_weight="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@color/gray"
+        android:textSize="35sp" />
 
     <TextClock
-        android:id="@+id/tc_timeText_24"
+        android:id="@+id/timeText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:format12Hour="hh:mm:ss"
-        android:format24Hour="HH:mm:ss"
+        android:layout_weight="5"
+        android:format12Hour="aa  hh:mm"
+        android:format24Hour="HH : mm"
         android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"/>
+        android:textSize="120sp"
+        android:textStyle="bold" />
+
     <TextClock
-        android:id="@+id/tc_dateText_24"
+        android:id="@+id/dateText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:format12Hour="yyyy/MM/dd E"
         android:format24Hour="yyyy/MM/dd E"
         android:gravity="center"
+        android:paddingBottom="12dp"
         android:textColor="@color/white"
-        android:textSize="20sp"/>
-    <TextView
-        android:id="@+id/tv_24hour"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="16sp"
-        android:padding="10dp"/>
+        android:textSize="30sp" />
+
 </LinearLayout>
