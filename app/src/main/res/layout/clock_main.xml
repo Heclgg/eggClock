@@ -26,7 +26,7 @@
         android:format24Hour="HH : mm"
         android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="120sp"
+        android:textSize="180sp"
         android:textStyle="bold" />
 
     <TextClock
@@ -39,6 +39,6 @@
         android:gravity="center"
         android:paddingBottom="12dp"
         android:textColor="@color/white"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
 </LinearLayout>
